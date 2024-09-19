@@ -1,6 +1,6 @@
-import 'package:apppaimon2/segpag.dart';
+import 'package:apppaimon2/list-onibus.dart';
 import 'package:flutter/material.dart';
-import 'package:apppaimon2/teste.dart';
+
 void main() {
   runApp(const MaterialApp(
     title: "App",
@@ -9,7 +9,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
