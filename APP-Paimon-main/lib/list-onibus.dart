@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'onibus.dart';
-import 'package:url_launcher/url_launcher.dart'; 
+import 'package:url_launcher/url_launcher.dart';
 
 void segpag() {
   runApp(const SegPag());
@@ -14,7 +14,7 @@ class SegPag extends StatelessWidget {
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
     } else {
-      throw 'nao foi possivel acessar o mapa';
+      throw 'Não foi possível acessar o mapa';
     }
   }
 
@@ -54,7 +54,7 @@ class SegPag extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center, // centralizar os textos 
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -67,16 +67,22 @@ class SegPag extends StatelessWidget {
                               ),
                               textAlign: TextAlign.center,
                             ),
-                            Text(
-                              onibus.descricao,
-                              style: const TextStyle(
-                                fontSize: 14,
+                            Container(
+                              width: maxWidth, 
+                              height: 60, // tamanho fixo vertical pra descrição n passar o tamanho da tela
+                              child: SingleChildScrollView(
+                                child: Text(
+                                  onibus.descricao,
+                                  style: const TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
-                              textAlign: TextAlign.center,
                             ),
                           ],
                         ),
-                        const SizedBox(width: 10), 
+                        const SizedBox(width: 10),
                         IconButton(
                           onPressed: () => _launchMap(onibus.latitude, onibus.longitude),
                           icon: const Icon(Icons.place),
@@ -84,14 +90,14 @@ class SegPag extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 10), 
+                  const SizedBox(height: 10),
                 ],
               );
             }).toList(),
           ),
         ),
       ),
-      backgroundColor: const Color(0xFFFFE4B8), 
+      backgroundColor: const Color(0xFFFFE4B8),
     );
   }
 }
