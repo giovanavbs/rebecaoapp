@@ -9,12 +9,12 @@ void segpag() {
 class SegPag extends StatelessWidget {
   const SegPag({super.key});
 
-  Future<void> _launchMap(double latitude, double longitude) async {
-    final Uri uri = Uri.parse('https://www.google.com/maps/search/?api=1&query=$latitude,$longitude');
+  Future<void> _launchLink(String url) async {
+    final Uri uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
     } else {
-      throw 'Não foi possível acessar o mapa';
+      throw 'nao foi possivel acessar o site';
     }
   }
 
@@ -84,8 +84,8 @@ class SegPag extends StatelessWidget {
                         ),
                         const SizedBox(width: 10),
                         IconButton(
-                          onPressed: () => _launchMap(onibus.latitude, onibus.longitude),
-                          icon: const Icon(Icons.place),
+                          onPressed: () => _launchLink(onibus.linkSite),
+                          icon: const Icon(Icons.link), // troquei o icon de localização pra link
                         ),
                       ],
                     ),
