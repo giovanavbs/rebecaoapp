@@ -44,4 +44,16 @@ List<Onibus> onibusList = [
     descricao: "Pertencidos a série de 8000 (e os primeiros a serem adotados neste conceito), representam até hoje o conceito de tecnologia, conforto e segurança da CPTM.",
     linkSite: 'https://meutransportecptm.blogspot.com/2014/10/cptm-evolucao-do-transporte-ferroviario.html', 
   ),
+    Onibus(
+    foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRble68xforCTaNfq88fflEQVwluasiMjgMXA&s',
+    nome: "Trem 2100",
+    descricao: "Conhecidos também como 'espanhóis', trabalhavam apenas na linha 10, concentrados a conectar o Brás ao Rio Grande da Serra. Eram elogiados por sua confiabilidade, conforto e boa capacidade de operação.",
+    linkSite: 'https://meutransportecptm.blogspot.com/2014/10/cptm-evolucao-do-transporte-ferroviario.html', 
+  ),
+  Onibus(
+    foto: 'https://i.imgur.com/z26CsBb.png',
+    nome: "Trem Marfesa 1100",
+    descricao: "O primeiro trem de aço inox do Brasil tem mais de 54 anos e atualmente vemos sua versão modernizada (a mesma apresentada). Ele prestava seus serviços entre Jundiaí e Paranapiacaba. Antigamente também chegou a prestar serviços para Santos, e uma de suas maiores características era conter um banheiro interior e usava um gerador de energia a gás para quando passasse por trajetos sem eletrificação.",
+    linkSite: 'https://meutransportecptm.blogspot.com/2014/10/cptm-evolucao-do-transporte-ferroviario.html', 
+  ),
 ];
